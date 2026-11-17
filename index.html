@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- Forside med fælles navigation, inspiration, opskrift og DIY-projekter. -->
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GRØN ">
+    <title>GRØN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<!-- menu linje -->
+<body>
+    <a class="skip-link" href="#main-content">Gå til hovedindhold</a>
+    <!-- Fælles topmenu; navigation.js styrer burgermenuen på mobil. -->
+    <header>
+        <div>
+        <a href="index.html"><h1>GRØN</h1></a>
+        </div>
+    <nav class="site-nav" aria-label="Hovedmenu">
+        <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Åbn menu">
+            <span class="site-nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="site-nav-toggle-label">Menu</span>
+        </button>
+        <div class="site-nav-links" id="site-nav-links">
+            <a href="om-os.html">Om os</a>
+            <a href="opskrifter.html">Opskrifter</a>
+            <a href="genbrug-diy.html">Genbrug &amp; DIY</a>
+            <a href="tips.html">Tips</a>
+        </div>
+        </nav>
+        <div class="bruger-links">
+            <a href="favoritter.html" aria-label="Favoritter">
+                <i class="fa-solid fa-heart nav-icon" aria-hidden="true"></i>
+                <span>Favoritter</span>
+            </a>
+            <button class="bruger-profil" type="button" aria-label="Profil" data-profil-aabn>
+                <i class="fa-solid fa-circle-user nav-icon" aria-hidden="true"></i>
+                <span>Profil</span>
+            </button>
+        </div>
+    </header>
+
+<main id="main-content" tabindex="-1">
+<!-- hero sektion tekst -->
+     <!-- Forsidens hero og genveje til hjemmesidens sider. -->
+     <section class="hero">
+        <div class="hero-content">
+            <h2>GRØN</h2>
+            <p>DET GRØNNE HJØRNE</p>
+            <button class="hero-medlemskab-knap" type="button" data-medlemskab-aabn>Bliv medlem</button>
+
+<!-- produkt emner -->
+        </div>
+        <div class="hero-kategorier">
+            <a href="om-os.html">Om os</a>
+            <a href="opskrifter.html">Opskrifter</a>
+            <a href="genbrug-diy.html">Genbrug &amp; DIY</a>
+            <a href="tips.html">Tips</a>
+        </div>
+    </section>
+
+    <!-- Velkomst og citat om madspild. -->
+    <section class="hero-intro" aria-labelledby="velkomst-overskrift">
+        <div class="hero-intro-tekst">
+            <h2 id="velkomst-overskrift">Velkommen til GRØN</h2>
+            <p>Hos GRØN – Det grønne hjørne tror vi på, at bæredygtighed ikke behøver at være kompliceret, dyrt eller tidskrævende. Det handler om de små valg, vi træffer hver dag, og hvordan de tilsammen kan gøre en forskel.</p>
+        </div>
+        <figure class="hero-intro-figur">
+            <blockquote class="madspild-citat">
+                <strong>26,7 %</strong>
+                <span>af madspildet kommer fra husholdningerne – det svarer til ca. 235.000 ton om året.</span>
+            </blockquote>
+            <img class="hero-intro-billede" src="media/Intro billede.jpg" alt="Grøntsagsvafler lavet med grønne råvarer">
+        </figure>
+    </section>
+
+    <!-- Udvalgte genbrugs- og DIY-projekter. -->
+    <section class="diy-sektion" aria-labelledby="diy-overskrift">
+        <div class="diy-sektion-indhold">
+            <div class="diy-sektion-heading">
+                <div>
+                    <p class="diy-label">Skab med omtanke</p>
+                    <h2 id="diy-overskrift">Genbrug &amp; DIY projekter</h2>
+                    <p>Find inspiration til kreative projekter, hvor du kan genbruge gamle ting til noget nyt.</p>
+                </div>
+                <a class="diy-se-alle" href="genbrug-diy.html">Se alle projekter <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="diy-projekt-grid">
+                <a class="diy-projektkort" href="genbrug-diy.html#projekt-vaegkurv">
+                    <img src="media/DIY væg kurv opbevaring.jpg" alt="Kurv monteret på væg til praktisk opbevaring">
+                    <div class="diy-projektinfo">
+                        <span class="diy-projektkategori">Opbevaring</span>
+                        <h3>Lav en vægkurv til opbevaring</h3>
+                        <span class="diy-projektlink">Se projektet <span aria-hidden="true">→</span></span>
+                    </div>
+                </a>
+                <a class="diy-projektkort" href="genbrug-diy.html#projekt-sengegavl">
+                    <img src="media/DIY senge galv.jpg" alt="Seng med hjemmelavet sengegavl">
+                    <div class="diy-projektinfo">
+                        <span class="diy-projektkategori">Genbrug i hjemmet</span>
+                        <h3>Lav en sengegavl</h3>
+                        <span class="diy-projektlink">Se projektet <span aria-hidden="true">→</span></span>
+                    </div>
+                </a>
+                <a class="diy-projektkort" href="genbrug-diy.html#projekt-makeupholder">
+                    <img src="media/DIY makeupholder.png" alt="Hjemmelavet holder til makeup">
+                    <div class="diy-projektinfo">
+                        <span class="diy-projektkategori">Opbevaring</span>
+                        <h3>Lav en makeupholder</h3>
+                        <span class="diy-projektlink">Se projektet <span aria-hidden="true">→</span></span>
+                    </div>
+                </a>
+                <a class="diy-projektkort" href="genbrug-diy.html#projekt-lysestage-perleblade">
+                    <img src="media/DIY lysestage m. perleblade.jpg" alt="Lysestage pyntet med perleblade">
+                    <div class="diy-projektinfo">
+                        <span class="diy-projektkategori">Boligpynt</span>
+                        <h3>Pynt en lysestage med perleblade</h3>
+                        <span class="diy-projektlink">Se projektet <span aria-hidden="true">→</span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kort introduktion til Tips-siden med genvej og billede. -->
+    <section class="hero-intro tips-intro" aria-labelledby="tips-intro-overskrift">
+        <figure class="hero-intro-figur">
+            <img class="hero-intro-billede" src="media/Indkøb.jpg" alt="Genbrugelige indkøbsposer med friske råvarer">
+        </figure>
+        <div class="hero-intro-tekst">
+            <p class="diy-label">Små skridt i hverdagen</p>
+            <h2 id="tips-intro-overskrift">Få tips til en grønnere hverdag</h2>
+            <p>Det behøver ikke være svært at leve lidt grønnere. Find enkle idéer til hjemmet, transport, indkøb og køkkenet, som du kan tage i dit eget tempo.</p>
+            <a class="opskrift-feature-knap" href="tips.html">Se tips</a>
+        </div>
+    </section>
+
+    <!-- Citat og udvalgt opskrift med ingredienser. -->
+    <aside class="citat-banner" aria-label="Citat fra Det Grønne Hjørne">
+        <blockquote>
+            <p>En grønnere hverdag begynder med små skridt</p>
+            <cite>Det Grønne Hjørne</cite>
+        </blockquote>
+    </aside>
+    <section class="opskrift-feature" aria-labelledby="opskrift-feature-overskrift">
+        <div class="opskrift-feature-indhold">
+            <img class="opskrift-feature-billede" src="media/Grøntsagevafler.jpg" alt="Grøntsagsvafler toppet med kyllingepålæg og avocado">
+            <div class="opskrift-feature-tekst">
+                <h2 id="opskrift-feature-overskrift">Lækre grøntsagevafler</h2>
+                <p class="opskrift-feature-intro">Grøntsagsvafler er en kreativ og lækker måde at bruge grøntsagsrester på. Vaflerne kan laves med mange forskellige grøntsager og toppes her med kyllingepålæg og cremet avocado. De er perfekte som snack, en let frokost eller et farverigt indslag til brunch.</p>
+                <h3>Ingredienser</h3>
+                <ul class="opskrift-ingredienser">
+                    <li><span>200 g</span> Grøntsager, fx spinat, gulerødder og blomkål</li>
+                    <li><span>3 stk.</span> Æg</li>
+                    <li><span>1 dl</span> Mælk</li>
+                    <li><span>1 dl</span> Havregryn</li>
+                    <li><span>1 dl</span> Hvedemel</li>
+                    <li><span>0,5 tsk.</span> Salt</li>
+                    <li><span>100 g</span> Revet cheddarost</li>
+                </ul>
+                <a class="opskrift-feature-knap" href="opskrifter.html">Se opskrifter</a>
+            </div>
+        </div>
+    </section>
+    <!-- Medlemskabsinformation og kontaktoplysninger. -->
+    <section class="medlemskab-banner" aria-labelledby="medlemskab-forside-overskrift">
+        <div class="medlemskab-boks">
+            <h2 id="medlemskab-forside-overskrift">MEDLEMSSKAB</h2>
+            <p>Vil du have flere idéer til en grønnere hverdag? Med et medlemskab hos GRØN – Det grønne hjørne får du adgang til vores samling af inspirerende opskrifter, kreative DIY-projekter og praktiske tips til en mere bæredygtig livsstil.</p>
+            <button class="medlemskab-knap" type="button" data-medlemskab-aabn>Bliv medlem her</button>
+        </div>
+    </section>
+    <section class="om-os-billedbanner" aria-label="Naturen inspirerer en grønnere hverdag">
+        <img src="media/stemningsbillede.jpg" alt="Grønne marker og natur i det danske landskab">
+    </section>
+    <section class="kontakt-oplysninger" aria-labelledby="kontakt-overskrift">
+        <h2 id="kontakt-overskrift">Kontakt os</h2>
+        <p>GRØN – Det grønne hjørne</p>
+        <p>service@Grøn.dk</p>
+        <p>+45 51 78 02 72</p>
+    </section>
+</main>
+<!-- Medlemskabsdialog; formularen viser, at profiloprettelse ikke er aktiveret. -->
+<dialog class="opskrift-dialog medlemskab-dialog" aria-labelledby="medlemskab-dialog-titel">
+    <button class="opskrift-dialog-luk" type="button" data-medlemskab-luk aria-label="Luk medlemskabsinformation">×</button>
+    <div class="medlemskab-dialog-indhold">
+        <p class="diy-label">Gratis medlemskab</p>
+        <h2 id="medlemskab-dialog-titel">Bliv en del af GRØN</h2>
+        <p>Det er gratis at bruge GRØN. Udforsk opskrifter, kreative projekter og tips til en grønnere hverdag.</p>
+        <ul>
+            <li>Udforsk opskrifter, der hjælper med at mindske madspild.</li>
+            <li>Find kreative Genbrug &amp; DIY-projekter.</li>
+            <li>Læs praktiske tips til bæredygtige valg.</li>
+            <li>Gem dine favoritter, så du nemt kan finde dem igen.</li>
+        </ul>
+        <p class="medlemskab-status-note">Profiloprettelse er endnu ikke aktiveret. Oplysningerne sendes ikke eller gemmes.</p>
+        <form class="medlemskab-form">
+            <label for="medlemskab-brugernavn">Brugernavn</label>
+            <input id="medlemskab-brugernavn" name="username" type="text" autocomplete="username" required>
+            <label for="medlemskab-kodeord">Kodeord</label>
+            <input id="medlemskab-kodeord" name="password" type="password" autocomplete="new-password" required>
+            <button class="medlemskab-form-knap" type="submit">Opret gratis profil</button>
+            <p class="medlemskab-form-status" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+</dialog>
+    <!-- Fælles sidefod; navigation.js folder linkgrupperne ud på mobil, mens CSS viser dem fast på desktop. -->
+    <footer class="site-footer">
+        <div class="site-footer-indhold">
+            <div class="footer-brand">
+                <a class="footer-logo" href="index.html">GRØN</a>
+                <p>det grønne hjørne</p>
+            </div>
+            <nav class="footer-kolonne" aria-label="GRØN">
+                <h2>
+                    <span class="footer-kolonne-titel">GRØN</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-gron">GRØN<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-gron">
+                    <a href="index.html" aria-current="page">Forside</a>
+                    <a href="om-os.html">Om os</a>
+                    <a href="opskrifter.html">Opskrifter</a>
+                    <a href="genbrug-diy.html">Genbrug &amp; DIY</a>
+                    <a href="tips.html">Tips</a>
+                </div>
+            </nav>
+            <nav class="footer-kolonne" aria-label="Medlem">
+                <h2>
+                    <span class="footer-kolonne-titel">MEDLEM</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-medlem">MEDLEM<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-medlem">
+                    <a href="om-os.html#medlemskab">Medlemskab</a>
+                    <a href="favoritter.html">Favoritter</a>
+                    <span>Login / opret</span>
+                    <button class="footer-profil-knap" type="button" data-profil-aabn>Profil</button>
+                </div>
+            </nav>
+            <nav class="footer-kolonne" aria-label="Support">
+                <h2>
+                    <span class="footer-kolonne-titel">Support</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-support">Support<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-support">
+                    <span>Hjælp &amp; support</span>
+                    <span>Kontakt os</span>
+                    <span>Ofte stillede spørgsmål</span>
+                    <span>Vilkår og privatliv</span>
+                </div>
+            </nav>
+            <div class="footer-sociale" role="group" aria-label="Sociale medier">
+                <span class="footer-sociale-ikon" role="img" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></span>
+                <span class="footer-sociale-ikon" role="img" aria-label="Instagram"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i></span>
+                <span class="footer-sociale-ikon" role="img" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></span>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2026 GRØN – Det grønne hjørne</p>
+    </footer>
+    <script src="navigation.js"></script>
+    <script src="favoritter.js"></script>
+    <script src="medlemskab.js"></script>
+    <script src="profil.js"></script>
+</body>
+</html>

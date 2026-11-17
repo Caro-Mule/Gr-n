@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Genbrug & DIY-side med projektsøgning, projektkort og guider. -->
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find inspiration til genbrug og kreative DIY-projekter hos GRØN.">
+    <title>Genbrug &amp; DIY | GRØN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Gå til hovedindhold</a>
+    <!-- Fælles topmenu; navigation.js styrer burgermenuen på mobil. -->
+    <header>
+        <div>
+            <a href="index.html"><h1>GRØN</h1></a>
+        </div>
+        <nav class="site-nav" aria-label="Hovedmenu">
+            <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Åbn menu">
+                <span class="site-nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="site-nav-toggle-label">Menu</span>
+            </button>
+            <div class="site-nav-links" id="site-nav-links">
+                <a href="om-os.html">Om os</a>
+                <a href="opskrifter.html">Opskrifter</a>
+                <a href="genbrug-diy.html" aria-current="page">Genbrug &amp; DIY</a>
+                <a href="tips.html">Tips</a>
+            </div>
+        </nav>
+        <div class="bruger-links">
+            <a href="favoritter.html" aria-label="Favoritter"><i class="fa-solid fa-heart nav-icon" aria-hidden="true"></i><span>Favoritter</span></a>
+            <button class="bruger-profil" type="button" aria-label="Profil" data-profil-aabn><i class="fa-solid fa-circle-user nav-icon" aria-hidden="true"></i><span>Profil</span></button>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+    <!-- DIY-sidens hero og introduktion. -->
+    <section class="hero hero-diy">
+        <div class="hero-content">
+            <h2>Genbrug &amp; DIY</h2>
+        </div>
+        <nav class="hero-kategorier" aria-label="DIY-kategorier">
+            <a href="#diy-projekt-grid" data-diy-filter="alle" aria-current="true">Alle projekter</a>
+            <a href="#diy-projekt-grid" data-diy-filter="tekstiler">Tekstiler</a>
+            <a href="#diy-projekt-grid" data-diy-filter="bolig">Bolig &amp; opbevaring</a>
+            <a href="#diy-projekt-grid" data-diy-filter="moebler">Møbler</a>
+            <a href="#diy-projekt-grid" data-diy-filter="koekken">Køkken</a>
+            <a href="#diy-projekt-grid" data-diy-filter="have">Have</a>
+            <a href="#diy-projekt-grid" data-diy-filter="kreativt">Kreativ genbrug</a>
+        </nav>
+    </section>
+
+    <!-- Kort introduktion og søgning blandt genbrugsprojekter. -->
+    <section class="opskrifter-banner" aria-label="Find inspiration til genbrugsprojekter">
+        <h2>Giv materialer nyt liv</h2>
+        <p>Find kreative projekter med ting og materialer, du allerede har.</p>
+    </section>
+
+    <!-- Søgning og liste over DIY-projekter. -->
+    <section class="opskrift-soegning" aria-labelledby="diy-soegning-overskrift">
+        <h2 id="diy-soegning-overskrift">Find dit næste DIY-projekt</h2>
+        <p>Søg efter et materiale eller et projekt, fx træ, sofabord eller krukke. Adskil flere søgeord med komma.</p>
+        <div class="opskrift-soegning-felt">
+            <label class="sr-only" for="diy-soegning-input">Søg efter materialer eller projekter</label>
+            <input id="diy-soegning-input" type="search" placeholder="Søg efter materialer eller projekter" autocomplete="off">
+            <button type="button" id="diy-soegning-nulstil">Ryd søgning</button>
+        </div>
+        <p class="opskrift-soegning-status" id="diy-soegning-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Projektkortene indsættes dynamisk af genbrug-diy.js. -->
+    <div class="diy-side">
+        <p class="diy-label">Skab med omtanke</p>
+        <h2>Genbrug &amp; DIY</h2>
+        <p class="diy-side-intro">Søg blandt idéer til møbler, boligpynt og praktiske løsninger lavet af genbrugsmaterialer.</p>
+        <section class="diy-projekt-grid diy-side-projekt-grid" id="diy-projekt-grid" aria-label="Genbrug og DIY projektidéer">
+            <p class="opskrift-ingen-resultater" id="diy-ingen-resultater" hidden>Vi fandt ingen projekter, der matcher din søgning. Prøv et andet materiale eller projektnavn.</p>
+        </section>
+        <a class="diy-tilbage" href="index.html">Tilbage til forsiden</a>
+    </div>
+    <!-- Afsluttende naturbillede og kontaktoplysninger. -->
+    <section class="om-os-billedbanner" aria-label="Naturen inspirerer en grønnere hverdag">
+        <img src="media/stemningsbillede.jpg" alt="Grønne marker og natur i det danske landskab">
+    </section>
+    <section class="kontakt-oplysninger" aria-labelledby="kontakt-overskrift">
+        <h2 id="kontakt-overskrift">Kontakt os</h2>
+        <p>GRØN – Det grønne hjørne</p>
+        <p>service@Grøn.dk</p>
+        <p>+45 51 78 02 72</p>
+    </section>
+    </main>
+    <!-- Dialog med materialer, trin og sikkerhed for projektet. -->
+    <dialog class="opskrift-dialog" id="diy-dialog" aria-labelledby="diy-dialog-titel">
+        <button class="opskrift-dialog-luk" type="button" aria-label="Luk projektguiden">×</button>
+        <div class="opskrift-dialog-indhold">
+            <img class="opskrift-dialog-billede" alt="">
+            <div class="opskrift-dialog-detaljer">
+                <p class="diy-label">DIY-guide</p>
+                <h2 id="diy-dialog-titel"></h2>
+                <h3>Materialer</h3>
+                <ul class="opskrift-dialog-ingredienser" id="diy-dialog-materialer"></ul>
+                <h3>Sådan gør du</h3>
+                <ol class="opskrift-dialog-trin" id="diy-dialog-trin"></ol>
+                <p class="diy-guide-sikkerhed" id="diy-dialog-sikkerhed" hidden></p>
+            </div>
+        </div>
+    </dialog>
+    <!-- Fælles sidefod; navigation.js folder linkgrupperne ud på mobil, mens CSS viser dem fast på desktop. -->
+    <footer class="site-footer">
+        <div class="site-footer-indhold">
+            <div class="footer-brand">
+                <a class="footer-logo" href="index.html">GRØN</a>
+                <p>det grønne hjørne</p>
+            </div>
+            <nav class="footer-kolonne" aria-label="GRØN">
+                <h2>
+                    <span class="footer-kolonne-titel">GRØN</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-gron">GRØN<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-gron">
+                    <a href="index.html">Forside</a>
+                    <a href="om-os.html">Om os</a>
+                    <a href="opskrifter.html">Opskrifter</a>
+                    <a href="genbrug-diy.html" aria-current="page">Genbrug &amp; DIY</a>
+                    <a href="tips.html">Tips</a>
+                </div>
+            </nav>
+            <nav class="footer-kolonne" aria-label="Medlem">
+                <h2>
+                    <span class="footer-kolonne-titel">MEDLEM</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-medlem">MEDLEM<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-medlem">
+                    <a href="om-os.html#medlemskab">Medlemskab</a>
+                    <a href="favoritter.html">Favoritter</a>
+                    <span>Login / opret</span>
+                    <button class="footer-profil-knap" type="button" data-profil-aabn>Profil</button>
+                </div>
+            </nav>
+            <nav class="footer-kolonne" aria-label="Support">
+                <h2>
+                    <span class="footer-kolonne-titel">Support</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-support">Support<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-support">
+                    <span>Hjælp &amp; support</span>
+                    <span>Kontakt os</span>
+                    <span>Ofte stillede spørgsmål</span>
+                    <span>Vilkår og privatliv</span>
+                </div>
+            </nav>
+            <div class="footer-sociale" role="group" aria-label="Sociale medier">
+                <span class="footer-sociale-ikon" role="img" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></span>
+                <span class="footer-sociale-ikon" role="img" aria-label="Instagram"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i></span>
+                <span class="footer-sociale-ikon" role="img" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></span>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2026 GRØN – Det grønne hjørne</p>
+    </footer>
+    <script src="navigation.js"></script>
+    <script src="genbrug-diy.js"></script>
+    <script src="favoritter.js"></script>
+    <script src="profil.js"></script>
+</body>
+</html>

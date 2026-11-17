@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Favoritside, hvor gemte opskrifter og DIY-projekter vises. -->
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Se dine gemte opskrifter og genbrugsprojekter hos GRØN.">
+    <title>Favoritter | GRØN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Gå til hovedindhold</a>
+    <!-- Fælles topmenu; navigation.js styrer burgermenuen på mobil. -->
+    <header>
+        <div><a href="index.html"><h1>GRØN</h1></a></div>
+        <nav class="site-nav" aria-label="Hovedmenu">
+            <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Åbn menu">
+                <span class="site-nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="site-nav-toggle-label">Menu</span>
+            </button>
+            <div class="site-nav-links" id="site-nav-links">
+                <a href="om-os.html">Om os</a>
+                <a href="opskrifter.html">Opskrifter</a>
+                <a href="genbrug-diy.html">Genbrug &amp; DIY</a>
+                <a href="tips.html">Tips</a>
+            </div>
+        </nav>
+        <div class="bruger-links">
+            <a href="favoritter.html" aria-current="page" aria-label="Favoritter"><i class="fa-solid fa-heart nav-icon" aria-hidden="true"></i><span>Favoritter</span></a>
+            <button class="bruger-profil" type="button" aria-label="Profil" data-profil-aabn><i class="fa-solid fa-circle-user nav-icon" aria-hidden="true"></i><span>Profil</span></button>
+        </div>
+    </header>
+
+    <!-- Indholdet udfyldes dynamisk af favoritter.js. -->
+    <main class="favorit-side" id="main-content" tabindex="-1">
+        <p class="diy-label">Dine gemte idéer</p>
+        <h2>Favoritter</h2>
+        <p class="favorit-intro">Her finder du de opskrifter og DIY-projekter, du har gemt.</p>
+        <p class="favorit-status" role="status" aria-live="polite"></p>
+        <section class="diy-projekt-grid" id="favorit-liste" aria-label="Dine favoritter"></section>
+    </main>
+
+    <!-- Fælles sidefod; navigation.js styrer mobilknapperne, og favoritter.js bygger favoritkortene ovenfor. -->
+    <footer class="site-footer">
+        <div class="site-footer-indhold">
+            <div class="footer-brand">
+                <a class="footer-logo" href="index.html">GRØN</a>
+                <p>det grønne hjørne</p>
+            </div>
+            <nav class="footer-kolonne" aria-label="GRØN">
+                <h2>
+                    <span class="footer-kolonne-titel">GRØN</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-gron">GRØN<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-gron">
+                    <a href="index.html">Forside</a>
+                    <a href="om-os.html">Om os</a>
+                    <a href="opskrifter.html">Opskrifter</a>
+                    <a href="genbrug-diy.html">Genbrug &amp; DIY</a>
+                    <a href="tips.html">Tips</a>
+                </div>
+            </nav>
+            <nav class="footer-kolonne" aria-label="Medlem">
+                <h2>
+                    <span class="footer-kolonne-titel">MEDLEM</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-medlem">MEDLEM<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-medlem">
+                    <a href="om-os.html#medlemskab">Medlemskab</a>
+                    <a href="favoritter.html" aria-current="page">Favoritter</a>
+                    <span>Login / opret</span>
+                    <button class="footer-profil-knap" type="button" data-profil-aabn>Profil</button>
+                </div>
+            </nav>
+            <nav class="footer-kolonne" aria-label="Support">
+                <h2>
+                    <span class="footer-kolonne-titel">Support</span>
+                    <button class="footer-accordion-toggle" type="button" aria-expanded="false" aria-controls="footer-links-support">Support<span aria-hidden="true">+</span></button>
+                </h2>
+                <div class="footer-kolonne-links" id="footer-links-support">
+                    <span>Hjælp &amp; support</span>
+                    <span>Kontakt os</span>
+                    <span>Ofte stillede spørgsmål</span>
+                    <span>Vilkår og privatliv</span>
+                </div>
+            </nav>
+            <div class="footer-sociale" role="group" aria-label="Sociale medier">
+                <span class="footer-sociale-ikon" role="img" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></span>
+                <span class="footer-sociale-ikon" role="img" aria-label="Instagram"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i></span>
+                <span class="footer-sociale-ikon" role="img" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></span>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2026 GRØN – Det grønne hjørne</p>
+    </footer>
+    <script src="navigation.js"></script>
+    <script src="favoritter.js"></script>
+    <script src="profil.js"></script>
+</body>
+</html>
